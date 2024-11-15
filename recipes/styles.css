@@ -1,0 +1,112 @@
+/* 基本樣式 */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background: linear-gradient(to bottom, #f7e8ff, #e3d7f2);
+    margin: 0;
+    padding: 0;
+}
+
+/* 頁面標題 */
+header {
+    text-align: center;
+    background-color: #6a0dad;
+    color: white;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+header p {
+    font-size: 1.2em;
+    font-style: italic;
+    margin: 0;
+}
+
+/* 主內容區 */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* 章節標題 */
+h2 {
+    color: #6a0dad;
+    border-bottom: 2px solid #e3d7f2;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* 介紹與內容區段 */
+section {
+    margin-bottom: 30px;
+}
+
+section p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* 個人資料列表樣式 */
+#profile ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#profile li {
+    padding: 5px 0;
+    font-size: 1.1em;
+}
+
+/* 圖片展示 */
+#gallery img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#gallery p {
+    text-align: center;
+    font-size: 1em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* 返回頂部連結樣式 */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #6a0dad;
+    color: white;
+    position: relative;
+}
+
+footer a {
+    color: #ffd700;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+/* 文字與連結過渡效果 */
+a {
+    color: #6a0dad;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #333;
+}

@@ -1,0 +1,178 @@
+/* 整體頁面設置 */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f0f8ff, #e0e8f4); /* 漸變背景 */
+}
+
+/* 標題區域 */
+header {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* 主標題 */
+#header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* 圖片設置 */
+#main-image {
+  width: 100%; /* 使圖片寬度自適應容器 */
+  max-width: 700px; /* 設定圖片最大寬度為 800px */
+  height: auto; /* 高度自動調整 */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 描述文字設置 */
+#imageLabel {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+/* 項目導航條 */
+nav ul {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  position: fixed;
+  top: 20px; /* 固定在頁面頂部 */
+  right: 20px; /* 固定在右上角 */
+  background-color: transparent; /* 設置為透明背景 */
+  border-radius: 25px;
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+nav ul li {
+  font-size: 1rem;
+  color: white;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #00bfff;  /* 藍色背景 */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #007acc; /* 懸停時變為深藍色 */
+  transform: scale(1.1);
+}
+
+/* 返回頂部按鈕 */
+.return-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background-color: #00bfff;  /* 藍色背景 */
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000;
+}
+
+.return-top:hover {
+  background-color: #007acc;  /* 懸停時變為深藍色 */
+  transform: scale(1.1);
+}
+
+/* 縮略圖區域 */
+#gallery {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* 使左右縮略圖區域等高 */
+  margin-top: 50px;
+  padding: 0 20px;
+}
+
+/* 左右縮略圖按鈕區 */
+.thumbnail-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1; /* 使縮略圖區域填滿可用空間 */
+  align-items: center;
+  justify-content: space-between; /* 按鈕間距 */
+}
+
+/* 縮略圖按鈕 */
+.imageButton {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imageButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imageButton img {
+  width: 180px;  /* 調整縮略圖大小 */
+  height: 180px; /* 調整縮略圖大小 */
+  border-radius: 5px;
+}
+
+
+/* 主圖片 */
+#mainImageContainer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#mainImage {
+  max-width: 80%;  /* 限制主圖片的最大寬度 */
+  height: auto;
+  border-radius: 10px;
+}
+
+/* 縮略圖按鈕 */
+.imageButton {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px 0;  /* 縮略圖按鈕的上下邊距 */
+}
+
+.imageButton:hover {
+  transform: scale(1.1); /* 當鼠標懸停時放大縮略圖 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.imageButton img {
+  width: 80px;  /* 設置縮略圖大小 */
+  height: 80px; /* 設置縮略圖大小 */
+  border-radius: 5px;
+}
+
+}
+
+/* 右側縮略圖區域 */
+#right-thumbnails {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between; /* 按鈕間距 */
+}

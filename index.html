@@ -1,20 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-Hant">
     <head>
         <meta charset="utf-8">
         <title>Nekomata Okayu</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1 id='header'>Nekomata Okayu</h1>
-        <img src='images/unnamed.webp' alt='a talented chef by the name of boyardee' style="width:800px;height:450px;">
-        <h3 id='image label'>A cat being raised by an old woman that runs an onigiri store. She streams from the computer in her grandma's room.</h3>
-        <div>
+        <header>
+            <h1 id='header'>Nekomata Okayu</h1>
+            <img src='images/unnamed.webp' alt='a talented chef by the name of boyardee' id="main-image" />
+            <h3 id='imageLabel'>A cat being raised by an old woman that runs an onigiri store.<br> She streams from the computer in her grandma's room.</h3>
+        </header>
+        
+        <!-- 固定於右上角的導航列 -->
+        <nav>
             <ul>
-                <li><a href='./recipes/lasagna.html'>Milk steak</a></li>
-                <li><a href="./recipes/gargle-blaster.html">Pan galactic gargle blaster</a></li>
-                <li><a href="./recipes/piemonade.html">Piemonade</a></li>
+                <li><a href='./recipes/lasagna.html'>小粥精美圖片</a></li>
+                <li><a href="./recipes/gargle-blaster.html">小粥的介紹</a></li>
+                <li><a href="./recipes/piemonade.html">小粥烤肉</a></li>
             </ul>
-        </div>
-        <a href="#header">Return to top</a>
+        </nav>
+
+        <!-- 固定於右下角的返回頂部按鈕 -->
+        <a href="#header" class="return-top">Return to top</a>
+
+        <section id="gallery">
+            <!-- 左側縮略圖區域 -->
+            <div class="thumbnail-column" id="left-thumbnails">
+                <button class="imageButton" data-image="images/Okayu-01.png">
+                    <img src="images/Okayu_01.png" alt="縮略圖1">
+                </button>
+                <button class="imageButton" data-image="images/Okayu-02.png">
+                    <img src="images/Okayu_02.png" alt="縮略圖2">
+                </button>
+                <button class="imageButton" data-image="images/Okayu-03.png">
+                    <img src="images/Okayu_03.png" alt="縮略圖3">
+                </button>
+                <button class="imageButton" data-image="images/Okayu-04.png">
+                    <img src="images/Okayu_04.png" alt="縮略圖4">
+                </button>
+            </div>
+            
+            <!-- 顯示主圖片 -->
+            <div id="mainImageContainer">
+                <img id="mainImage" src="images/Okayu-01.png" alt="貓又小粥的形象">
+            </div>
+
+            <!-- 右側縮略圖區域 -->
+            <div class="thumbnail-column" id="right-thumbnails">
+                <button class="imageButton" data-image="images/Okayu-05.png">
+                    <img src="images/Okayu_05.png" alt="縮略圖5">
+                </button>
+                <button class="imageButton" data-image="images/Okayu-06.png">
+                    <img src="images/Okayu_06.png" alt="縮略圖6">
+                </button>
+                <button class="imageButton" data-image="images/Okayu-07.png">
+                    <img src="images/Okayu_07.png" alt="縮略圖7">
+                </button>
+                <button class="imageButton" data-image="images/Okayu-08.png">
+                    <img src="images/Okayu_08.png" alt="縮略圖8">
+                </button>
+            </div>
+        </section>
+        
     </body>
+
+    <script>
+        const mainImage = document.getElementById("mainImage");
+        const imageButtons = document.querySelectorAll(".imageButton");
+
+        // 點擊縮略圖切換主圖
+        imageButtons.forEach((button) => {
+            button.addEventListener("click", () => {
+                const newImage = button.getAttribute("data-image");
+                mainImage.src = newImage;
+            });
+        });
+    </script>
 </html>
