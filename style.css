@@ -19,11 +19,16 @@ header {
   color: #333;
   margin-bottom: 10px;
 }
+#head {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
 
 /* 圖片設置 */
 #main-image {
-  width: 100%; /* 使圖片寬度自適應容器 */
-  max-width: 700px; /* 設定圖片最大寬度為 800px */
+  max-width: 500px; /* 設定圖片最大寬度為 800px */
   height: auto; /* 高度自動調整 */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -98,6 +103,7 @@ nav ul li a:hover {
   align-items: stretch; /* 使左右縮略圖區域等高 */
   margin-top: 50px;
   padding: 0 20px;
+  width: 50%;
 }
 
 /* 左右縮略圖按鈕區 */
@@ -139,9 +145,10 @@ nav ul li a:hover {
 }
 
 #mainImage {
-  max-width: 80%;  /* 限制主圖片的最大寬度 */
-  height: auto;
+  max-width: 330px;  /* 限制主圖片的最大寬度 */
+  height: 640px;
   border-radius: 10px;
+  object-fit: cover;
 }
 
 /* 縮略圖按鈕 */
@@ -175,4 +182,18 @@ nav ul li a:hover {
   gap: 20px;
   align-items: center;
   justify-content: space-between; /* 按鈕間距 */
+}
+
+.Character-description{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+.peers{
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
